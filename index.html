@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanrio</title>
+
+  <style>
+  /* Fuentes */
+  @font-face {
+    font-family: 'Japan';
+    src: url('fonts/Japan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Odin Rounded - Bold';
+    src: url('fonts/Odin Rounded - Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'Odin Rounded - Bold', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+  }
+
+  header {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-family: 'Japan', sans-serif; 
+    font-size: 3em;
+    color: #8B0000; 
+    margin: 0;
+  }
+
+  nav {
+    border-top: 2px solid #8B0000;
+    border-bottom: 2px solid #8B0000;
+    padding: 5px 0;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 0 ;
+  }
+
+  nav ul li a {
+    font-family: 'Odin Rounded - Bold', sans-serif;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 12px;
+    font-size: 1.2em;
+    margin: 0 30px;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Dropdown de Personajes */
+  nav ul li.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  nav ul li.dropdown a {
+    cursor: pointer;
+  }
+
+  nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #8B0000;
+    border-radius: 5px;
+    min-width: 150px;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  nav ul li .dropdown-menu li {
+    display: block;
+    margin: 0;
+  }
+
+  nav ul li .dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+  }
+
+  nav ul li .dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+  }
+
+  nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+
+  main h2 {
+    margin-bottom: 20px;
+    font-family: 'Odin Rounded - Bold', sans-serif;
+    font-size: 2em;
+  }
+
+  /* Galería de imágenes */
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .galeria a img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .galeria a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  aside {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 20px 0;
+  }
+
+  footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sanrio</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+
+      <!-- Menú desplegable de Personajes -->
+      <li class="dropdown">
+        <a href="#">Personajes ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="hellokitty.html">Hello Kitty</a></li>
+          <li><a href="mymelody.html">My Melody</a></li>
+          <li><a href="kuromi.html">Kuromi</a></li>
+          <li><a href="cinnamoroll.html">Cinnamoroll</a></li>
+          <li><a href="pompompurin.html">Pompompurin</a></li>
+          <li><a href="chococat.html">Chococat</a></li>
+          <li><a href="pochacco.html">Pochacco</a></li>
+          <li><a href="littletwinstar.html">Little Twin Stars</a></li>
+        </ul>
+      </li>
+
+      <li><a href="halloween.html">Halloween</a></li>
+      <li><a href="escuela.html">School</a></li>
+      <li><a href="Favoritos.html">Lista de deseos</a></li>
+      <li><a href="carrito.html">Carrito</a></li>
+      <li><a href="cuenta.html">Mi Cuenta</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>¿Cuál es tu favorito?</h2>
+      <div class="galeria">
+        <a href="hellokitty.html"><img src="images/hellokitty.jpeg" alt="Hello Kitty"></a>
+        <a href="mymelody.html"><img src="images/mymelody.jpeg" alt="My Melody"></a>
+        <a href="kuromi.html"><img src="images/kuromi.jpeg" alt="Kuromi"></a>
+        <a href="cinnamoroll.html"><img src="images/cinnamoroll.jpeg" alt="Cinnamoroll"></a>
+        <a href="pompompurin.html"><img src="images/pompompurin.jpeg" alt="Pompompurin"></a>
+        <a href="chococat.html"><img src="images/chococat.jpg" alt="Chococat"></a>
+        <a href="pochacco.html"><img src="images/pochacco.jpeg" alt="Pochacco"></a>
+        <a href="littletwinstar.html"><img src="images/littletwinstar.jpeg" alt="Little Twin Stars"></a>
+      </div>
+    </section>
+  </main>
+
+  <aside>
+    <p> ...</p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Sanrio Build | Proyecto académico</p>
+    <p><a href="#">Contacto</a> | <a href="#">Acerca de</a></p>
+  </footer>
+
+</body>
+</html>  
